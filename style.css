@@ -1,0 +1,447 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --navy:#07111f; --navy2:#0d1d30; --gold:#d6ad62; --gold2:#f0d39a;
+  --cream:#f5f0e7; --white:#fff; --muted:#aab5c4; --line:rgba(255,255,255,.12);
+  --max:1240px; --ease:cubic-bezier(.2,.75,.2,1);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--white);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.03;margin:0}
+h1{font-size:clamp(3.2rem,8vw,7.8rem);letter-spacing:-.065em}
+h2{font-size:clamp(2.3rem,5vw,5rem);letter-spacing:-.05em}
+p{line-height:1.75;color:#c2ccd7}.eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 21px;border:1px solid var(--gold);font-weight:700;transition:.3s var(--ease)}
+.btn.gold{background:var(--gold);color:#111;border-color:var(--gold)}.btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(0,0,0,.25)}
+.nav{position:fixed;z-index:50;top:0;left:0;right:0;padding:20px 0;background:linear-gradient(180deg,rgba(7,17,31,.96),rgba(7,17,31,.55),transparent);backdrop-filter:blur(8px)}
+.navrow{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{font-family:Manrope;font-weight:800;letter-spacing:.04em;font-size:1.1rem;display:flex;align-items:center;gap:10px}
+.logo-img{height:34px;width:auto}
+.links{display:flex;gap:28px;font-size:.84rem}.links a{opacity:.8}.links a:hover{opacity:1;color:var(--gold)}
+.menu{display:none;background:none;border:1px solid var(--line);color:#fff;padding:9px 12px}
+.hero{min-height:100vh;position:relative;display:grid;align-items:end;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,17,31,.85) 0%,rgba(7,17,31,.45) 52%,rgba(7,17,31,.15));z-index:1;pointer-events:none}
+
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+
+.hero-content{position:relative;z-index:2}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(transparent,var(--navy))}
+.hero-content{position:relative;z-index:2;padding:180px 0 90px;max-width:1050px}
+.hero h1 span{color:var(--gold)}.hero-copy{max-width:650px;font-size:1.05rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.scroll{position:absolute;z-index:3;right:35px;bottom:35px;writing-mode:vertical-rl;color:var(--muted);font-size:.7rem;letter-spacing:.2em}
+.reveal{animation:up .9s var(--ease) both}.d2{animation-delay:.12s}.d3{animation-delay:.24s}
+@keyframes up{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:none}}
+.section{padding:120px 0}.light{background:var(--cream);color:#111}.light p{color:#52606e}.light h2{color:#101820}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid rgba(255,255,255,.12);padding:32px;min-height:250px;background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.01));transition:.35s var(--ease)}
+.card:hover{transform:translateY(-8px);border-color:rgba(214,173,98,.55)}
+.card .num{font-size:.7rem;color:var(--gold);letter-spacing:.15em}.card h3{font-size:1.45rem;margin:35px 0 12px}
+.photo{height:600px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}.photo:hover img{transform:scale(1.04)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d9cfbe;border-bottom:1px solid #d9cfbe;margin-top:60px}
+.stat{padding:30px 18px;border-right:1px solid #d9cfbe}.stat:last-child{border:0}.stat b{font:800 2.6rem Manrope;color:#101820}.stat span{display:block;margin-top:5px;color:#687582;font-size:.8rem}
+.service{padding:26px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:90px 1fr 1.2fr;gap:25px;align-items:start}.service:first-child{border-top:1px solid var(--line)}.service code{color:var(--gold)}.service h3{font-size:1.25rem}
+.portfolio{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:45px}.brand{padding:25px 15px;border:1px solid rgba(0,0,0,.13);background:#fff;text-align:center;color:#111;font:700 1rem Manrope;min-height:90px;display:grid;place-items:center}
+.cta{background:linear-gradient(120deg,#10263d,#07111f);padding:80px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+footer{padding:40px 0;color:var(--muted);font-size:.78rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.pagehero{padding:180px 0 90px;background:radial-gradient(circle at 80% 20%,#183552 0,#07111f 45%);border-bottom:1px solid var(--line)}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px}.form{display:grid;gap:16px}.form input,.form textarea{width:100%;padding:15px;background:#fff;border:1px solid #d7dce1;font:inherit}.form textarea{min-height:160px}
+.intro{position:fixed;inset:0;background:#050c15;z-index:100;display:grid;place-items:center;animation:introOut 1s 2.4s forwards}.intro-inner{text-align:center}.intro-logo{font:800 clamp(3rem,10vw,9rem) Manrope;letter-spacing:-.08em}.intro-line{width:0;height:1px;background:var(--gold);margin:20px auto;animation:line 1.2s .4s forwards}.intro small{color:var(--gold);letter-spacing:.3em;font-size:.65rem}@keyframes line{to{width:180px}}@keyframes introOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+@media(max-width:900px){.links{display:none}.menu{display:block}.grid2,.contact{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.photo{height:430px}.stats{grid-template-columns:1fr 1fr}.portfolio{grid-template-columns:repeat(2,1fr)}.service{grid-template-columns:70px 1fr}}
+@media(max-width:600px){.container{width:min(100% - 32px,var(--max))}.section{padding:80px 0}.grid3{grid-template-columns:1fr}.hero-content{padding-top:160px}.scroll{display:none}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #d9cfbe}}
+/* ============================================================
+   IT Materials Grid (materials.html)
+   ============================================================ */
+.it-materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.it-card {
+  position: relative;
+  display: block;
+  height: 340px;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.it-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+.it-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+}
+
+.it-card:hover .it-card-bg {
+  transform: scale(1.08);
+}
+
+.it-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.05) 100%);
+  z-index: 1;
+}
+
+.it-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.it-card-num {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #d4b483;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.it-card-content h3 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.it-card-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+}
+
+@media (max-width: 640px) {
+  .it-card { height: 280px; }
+  .it-card-content h3 { font-size: 1.25rem; }
+}
+/* Deepseek code od iv */
+body.about-page {
+    background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+    position: relative;
+}
+/* Optional: Add a subtle circuit board pattern overlay */
+body.about-page::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80');
+    background-size: cover;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+}
+/*Deep seek for software icon*/
+/* ============================================================
+   Software Portfolio (software.html)
+   ============================================================ */
+.software-section {
+  padding: 80px 0 100px;
+}
+
+.software-section h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.software-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(214, 173, 98, 0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.software-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.software-logo {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  min-width: 100px;
+}
+
+.software-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.software-card h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.75rem;
+  color: #fff;
+}
+
+.software-card p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .software-section h1 { font-size: 1.9rem; }
+  .software-grid { padding: 0 1rem; gap: 1.5rem; }
+  .software-card { padding: 1.5rem; }
+}
+
+/* ============================================================
+   Services — Mobile layout fix
+   ============================================================ */
+@media (max-width: 900px) {
+  .service {
+    display: block;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .service code {
+    display: block;
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+  }
+  .service h3 {
+    display: block;
+    font-size: 1.4rem;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+  }
+  .service p {
+    display: block;
+    margin: 0;
+    line-height: 1.75;
+    font-size: 0.98rem;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+}
+
+/* ============================================================
+   Intro logo (inline SVG)
+   ============================================================ */
+.intro-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.intro-mark {
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .intro-mark { width: 180px; height: 180px; }
+}
+
+@keyframes introMarkIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ============================================================
+   Scroll reveal animation
+   ============================================================ */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(.2,.75,.2,1),
+              transform 0.9s cubic-bezier(.2,.75,.2,1);
+  will-change: opacity, transform;
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility — respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-init {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Prevent horizontal scroll from stagger during page load */
+body { overflow-x: hidden; }
+
+/* ============================================================
+   Hero video background
+   ============================================================ */
+.hero { position: relative; overflow: hidden; }
+.hero > .hero-content { position: relative; z-index: 3; }
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+/* Dark gradient overlay for text readability */
+.hero:before {
+  z-index: 1;
+  pointer-events: none;
+}
+/* ADD mobile hero background image */
+@media (max-width: 768px) {
+  .hero-video {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+  }
+  .hero {
+    background: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .hero:before {
+    background: linear-gradient(180deg, rgba(7,17,31,.55) 0%, rgba(7,17,31,.85) 100%) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+  }
+  .hero > .hero-content {
+    position: relative !important;
+    z-index: 4 !important;
+  }
+}
+
+/* ============================================================
+   Software logos — individual sizes per card
+   Order: 1.Adobe 2.ZWSOFT 3.Acronis 4.CrowdStrike
+          5.Nitro 6.Microsoft 7.WinZip 8.WinRAR 9.ManyMore
+   ============================================================ */
+
+/* Base — the white box behind every logo */
+.software-card .software-logo {
+  min-width: 150px !important;
+  min-height: 100px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1.2rem 1.5rem !important;
+}
+
+/* Base — the image inside every logo box */
+.software-card .software-logo img {
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* ---------- Per-logo image sizes (change width to resize) ---------- */
+
+/* 1. Adobe */
+.software-card:nth-child(1) .software-logo img {
+  width: 100px !important;
+  max-width: 100px !important;
+  max-height: 70px !important;
+}
+
+/* 2. ZWSOFT — text badge */
+.software-card:nth-child(2) .software-logo {
+  font-size: 1.5rem !important;
+}
+
+/* 3. Acronis — text badge */
+/* 3. Acronis — image */
+.software-card:nth-child(3) .software-logo img {
+  width: 120px !important;
+  max-width: 120px !important;
+  max-height: 80px !important;
+}
+
+/* 4. CrowdStrike — image */
+.software-card:nth-child(4) .software-logo img {
+  width: 130px !important;
+  max-width: 130px !important;
+  max-height: 85px !important;
+}
+
+/* 5. Nitro — text badge */
+.software-card:nth-child(5) .software-logo {
+  font-size: 1.7rem !important;
+}
+
+/* 6. Microsoft — image */
+.software-card:nth-child(6) .software-logo img {
+  width: 90px !important;
+  max-width: 90px !important;
+  max-height: 65px !important;
+}
+
+/* 7. WinZip — image */
+.software-card:nth-child(7) .software-logo img {
+  width: 105px !important;
+  max-width: 105px !important;
+  max-height: 75px !important;
+}
+
+/* 8. WinRAR — image */
+.software-card:nth-child(8) .software-logo img {
+  width: 120px !important;
+  max-width: 120px !important;
+  max-height: 75px !important;
+}
+
+/* 9. Many More — text badge */
+.software-card:nth-child(9) .software-logo {
+  font-size: 1.2rem !important;
+}
